@@ -1,0 +1,29 @@
+{
+  "name": "ecommerce-platform",
+  "version": "1.0.0",
+  "description": "Ecommerce platform prototype with inventory, ordering, and tracking",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.0",
+    "express-rate-limit": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
+  },
+  "keywords": ["ecommerce", "inventory", "orders", "tracking"],
+  "author": "Assistant",
+  "license": "MIT"
+}
